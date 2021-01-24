@@ -1,6 +1,9 @@
-import 'package:flutter/material.dart';
+import '../bloc/radio_player_bloc/radio_state.dart';
 
 abstract class RadioPlayer {
-  Future<void> play({@required String url});
+  Stream<RadioState> radioStateStream;
+
+  Future<void> setUrl(String url);
+  Future<void> play();
   Future<void> pause();
 }
