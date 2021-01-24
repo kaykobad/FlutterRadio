@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:flutter_radio/bloc/radio_state.dart';
+import 'package:flutter_radio/bloc/radio_player_bloc/radio_state.dart';
 import 'package:flutter_radio/ui/home_screen.dart';
 
-import '../bloc/radio_bloc.dart';
+import '../bloc/radio_player_bloc/radio_bloc.dart';
 import '../radio_player/audio_player.dart';
 import '../radio_player/radio_player.dart';
 import '../constants/string_constants.dart';

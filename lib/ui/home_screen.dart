@@ -3,9 +3,9 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:loading/indicator/line_scale_pulse_out_indicator.dart';
 import 'package:loading/loading.dart';
 
-import '../bloc/radio_bloc.dart';
-import '../bloc/radio_event.dart';
-import '../bloc/radio_state.dart';
+import '../bloc/radio_player_bloc/radio_bloc.dart';
+import '../bloc/radio_player_bloc/radio_event.dart';
+import '../bloc/radio_player_bloc/radio_state.dart';
 import '../constants/string_constants.dart';
 import 'idle_dots.dart';
 
