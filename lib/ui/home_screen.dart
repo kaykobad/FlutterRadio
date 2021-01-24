@@ -6,17 +6,16 @@ import 'package:loading/loading.dart';
 import '../bloc/radio_bloc.dart';
 import '../bloc/radio_event.dart';
 import '../bloc/radio_state.dart';
+import '../constants/string_constants.dart';
 import 'idle_dots.dart';
 
 class HomePage extends StatelessWidget {
-  final _planetRockUrl = 'https://stream-mz.planetradio.co.uk/planetrock.mp3';
-  final _planetRockImage = 'assets/images/planet_rock.png';
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Online Radio'),
+        title: Text(StringConstants.APP_NAME),
+        centerTitle: true,
       ),
       body: Padding(
         padding: const EdgeInsets.only(bottom: 100),
@@ -50,7 +49,7 @@ class HomePage extends StatelessWidget {
               child: Container(
                 height: 50,
                 width: 50,
-                child: Image.asset(_planetRockImage),
+                child: Image.asset(StringConstants.planetRockImage),
               ),
             ),
             Text(
@@ -68,7 +67,7 @@ class HomePage extends StatelessWidget {
                         size: 32,
                       ),
                       onPressed: () {
-                        context.bloc<RadioBloc>().add(PlayEvent(_planetRockUrl));
+                        context.bloc<RadioBloc>().add(PlayEvent(StringConstants.planetRockUrl));
                       },
                     );
                   } else {
