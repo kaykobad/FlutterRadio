@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_radio/bloc/radio_state.dart';
+import 'package:flutter_radio/ui/home_screen.dart';
 
 import '../bloc/radio_bloc.dart';
 import '../radio_player/audio_player.dart';
@@ -15,8 +16,8 @@ class FlutterRadio extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       theme: ThemeData.dark(),
       home: BlocProvider<RadioBloc>(
-        create: (context) => RadioBloc(PausedState()),
-        child: Container(),
+        create: (context) => RadioBloc(PausedState(), radioPlayer),
+        child: HomePage(),
       ),
     );
   }
