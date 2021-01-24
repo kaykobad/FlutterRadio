@@ -6,10 +6,10 @@ import 'package:just_audio/just_audio.dart';
 
 class JustAudioPlayer extends RadioPlayer {
   final AudioPlayer _audioPlayer = AudioPlayer();
-  Stream<CurrentRadioState> currentRadioStateStream;
+  Stream<CurrentRadioState> radioStateStream;
 
   JustAudioPlayer() {
-    currentRadioStateStream = _audioPlayer.playbackStateStream.map(_mapToCurrentRadioState);
+    radioStateStream = _audioPlayer.playbackStateStream.map(_mapToCurrentRadioState);
   }
 
   @override

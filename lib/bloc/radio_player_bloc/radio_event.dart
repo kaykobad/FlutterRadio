@@ -1,4 +1,5 @@
 import 'package:equatable/equatable.dart';
+import 'package:flutter_radio/model/station.dart';
 
 class RadioEvent extends Equatable {
   @override
@@ -6,12 +7,12 @@ class RadioEvent extends Equatable {
 }
 
 class PlayEvent extends RadioEvent {
-  final String url;
+  final Station station;
 
-  PlayEvent(this.url) : assert(url != null);
+  PlayEvent(this.station);
 
   @override
-  List<Object> get props => [url];
+  List<Object> get props => [station];
 }
 
 class PauseEvent extends RadioEvent {

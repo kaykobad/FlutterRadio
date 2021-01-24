@@ -1,7 +1,7 @@
-import '../bloc/radio_player_bloc/radio_state.dart';
+import 'current_radio_state.dart';
 
 abstract class RadioPlayer {
-  Stream<RadioState> radioStateStream;
+  Stream<CurrentRadioState> radioStateStream;
 
   Future<void> setUrl(String url);
   Future<void> play();
