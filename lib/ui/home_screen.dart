@@ -23,7 +23,7 @@ class HomePage extends StatelessWidget {
           child: Center(
             child: BlocBuilder<RadioBloc, RadioState>(builder: (context, state) {
               if (state is PausedState) {
-                return IdleDots(color: Theme.of(context).accentColor);
+                return IdleIndicatorWidget(color: Theme.of(context).accentColor);
               } else if (state is PlayingState) {
                 return Loading(
                   indicator: LineScalePulseOutIndicator(),
